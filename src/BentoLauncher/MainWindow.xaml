@@ -1,8 +1,34 @@
 ﻿<Window x:Class="BentoLauncher.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" WindowStyle="None">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button Content="⚙️" Margin="5" Name="SettingsBtn" Grid.Column="1" HorizontalAlignment="Center" />
+        <!-- <Grid Grid.Row="1"  Name="grid1" Grid.ColumnSpan="2" /> -->
         
+        <TextBox Margin="5" Name="SearchTxtBx" HorizontalContentAlignment="Center" />
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <WrapPanel ItemHeight="75" ItemWidth="75" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5">
+                <Button Content="📁" Name="button1" Margin="5" />
+                <Button Content="📁" Name="button2" Margin="5" />
+                <Button Content="📁" Name="button3" Margin="5" />
+                <Button Content="📁" Name="button4" Margin="5" />
+                <Button Content="📁" Name="button5" Margin="5" />
+            </WrapPanel>
+        </Grid>
     </Grid>
 </Window>
